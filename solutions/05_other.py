@@ -1,9 +1,12 @@
 #
 # Exercise 14
 #
+import numpy
+
+
 def compute_from_file(filename, function, sep=';'):
     """Do some mathematical operations for each row in a file
-    
+
     >>> compute_from_file('data.csv', 'average')
     [...]
     >>> compute_from_file('data.csv', 'median')
@@ -17,13 +20,17 @@ def compute_from_file(filename, function, sep=';'):
             results.append(function([float(num) for num in row.split(sep)]))
     # if we use with we don't need to remeber to close the file
     return results
-        
+
 compute_from_file('data.csv', numpy.max)
 
 
 #
 # Exercise 15
 #
+import fnmatch
+import os
+
+
 class Finder(object):
     def __init__(self, dirpath, match, verbose=False):
         self.found = 0
@@ -47,6 +54,7 @@ class Finder(object):
                     print 'found: %s' % abspath
             if os.path.isdir(abspath):
                 self.looking_for(abspath)
+
 
 Finder('.', '*.py')()
 

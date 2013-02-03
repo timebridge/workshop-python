@@ -1,10 +1,11 @@
+
+
 #
 # Exercise 8
 #
-
 def divide(numerator, denominator):
     try:
-        return numerator/denominator
+        return numerator / denominator
     except ZeroDivisionError:
         print "Divide a number with 0 is not a valid operation!"
     except TypeError:
@@ -20,13 +21,3 @@ def args_kargs(*args, **kargs):
         print 'arg:', arg
     for key, val in kargs.items():
         print 'karg[%s]: %r' % (key, val)
-
-
-
-#
-# Exercise 7
-#
-
-#
-# Exercise 7
-#

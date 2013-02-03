@@ -21,4 +21,3 @@ word = 'python'
 u"Still missing: %+d €" % -integer
 "the pigreco value is around: %2.5f" % double
 word.center(14)
-
